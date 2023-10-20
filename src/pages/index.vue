@@ -1,8 +1,7 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main>
-    Hello from unplugin-vue-router!
+    <div class="text-3xl font-bold underline">Hello World!</div>
   </main>
 </template>
