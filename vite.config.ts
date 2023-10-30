@@ -3,10 +3,13 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+
 import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Layouts from 'vite-plugin-vue-layouts'
 import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
@@ -33,7 +36,14 @@ export default defineConfig({
         '@vueuse/core'
       ]
     }),
-    Components()
+    Components({
+      directoryAsNamespace: true,
+      collapseSamePrefixes: true
+    }),
+    Layouts({
+      layoutsDirs: 'src/layouts',
+      defaultLayout: 'default'
+    })
   ],
   resolve: {
     alias: {

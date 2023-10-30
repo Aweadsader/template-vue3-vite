@@ -14,6 +14,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": [
+      "vite-plugin-vue-layouts/client"
+      // "vite-plugin-vue-layouts/client.d.ts"
+    ]
   }
 }
