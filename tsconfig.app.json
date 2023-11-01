@@ -17,7 +17,7 @@
     },
     "types": [
       "vite-plugin-vue-layouts/client"
-      // "vite-plugin-vue-layouts/client.d.ts"
+      // "vite-plugin-vue-layouts/client.d.ts",
     ]
   }
 }
