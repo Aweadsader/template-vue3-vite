@@ -15,6 +15,8 @@ import UnoCSS from 'unocss/vite'
 
 import { VitePWA } from 'vite-plugin-pwa'
 
+import { viteMockServe } from 'vite-plugin-mock'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -53,7 +55,10 @@ export default defineConfig({
       layoutsDirs: 'src/layouts',
       defaultLayout: 'default'
     }),
-    VitePWA({})
+    VitePWA({}),
+    viteMockServe({
+      enable: false
+    })
   ],
   resolve: {
     alias: {
