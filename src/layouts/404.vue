@@ -1,6 +1,6 @@
 <template>
   <div>
-    <RouterView></RouterView>
+    <h1>404</h1>
   </div>
 </template>
 
@@ -9,8 +9,3 @@
 <style scoped>
 /* Add your styles here */
 </style>
-
-<route lang="yaml">
-meta:
-  layout: default
-</route>

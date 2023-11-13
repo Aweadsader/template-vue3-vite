@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <div class="text-3xl font-bold underline">Hello World!</div>
+    <div>home</div>
     <ReloadPrompt></ReloadPrompt>
   </main>
 </template>
