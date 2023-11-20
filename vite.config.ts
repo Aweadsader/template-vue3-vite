@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import VueMacros from 'unplugin-vue-macros/vite'
 
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
@@ -21,14 +20,9 @@ import { viteMockServe } from 'vite-plugin-mock'
 export default defineConfig({
   plugins: [
     VueRouter(),
-    // vue(),
-    // vueJsx(),
-    VueMacros({
-      plugins: {
-        vue: vue(),
-        vueJsx: vueJsx()
-      }
-    }),
+    vue(),
+    vueJsx(),
+    vueJsx(),
     UnoCSS(),
     AutoImport({
       // targets to transform
